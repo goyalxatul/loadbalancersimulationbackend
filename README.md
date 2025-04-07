@@ -1,1 +1,1 @@
-this is load balancing simulator frontend
+this is load balancing simulator backend
