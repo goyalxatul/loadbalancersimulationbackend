@@ -31,11 +31,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- CloudSim (installed locally) -->
+        <!-- CloudSim 3.0.3 from local lib folder -->
         <dependency>
             <groupId>org.cloudbus.cloudsim</groupId>
             <artifactId>cloudsim</artifactId>
             <version>3.0.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/cloudsim-3.0.3.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -46,6 +48,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.7.5</version>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
             </plugin>
         </plugins>
     </build>
